@@ -20,69 +20,37 @@
 </head>
 
 <body>
-
-    <!-- ========================= -->
-    <!-- Navigation -->
-    <!-- ========================= -->
-
-    <header>
-
-        <nav class="navbar">
-
-            <div class="logo">
-                Ken Chisholm
-            </div>
-
-            <ul class="nav-links">
-
-                <li><a href="#about">About</a></li>
-
-                <li><a href="#experience">Experience</a></li>
-
-                <li><a href="#projects">Projects</a></li>
-
-                <li><a href="#skills">Skills</a></li>
-
-                <li><a href="#contact">Contact</a></li>
-
-            </ul>
-
-        </nav>
-
-    </header>
-
     <!-- ========================= -->
     <!-- Hero -->
     <!-- ========================= -->
 
     <section id="hero">
+        <style>
+            #hero {
+                background-image: url('assets/Mount_Vancouver.jpg');
+                background-repeat: no-repeat;
+                background-attachment: scroll;
+                background-size: cover;
+            }
+        </style>
 
         <div class="hero-content">
 
             <h1>
-                Embedded Systems &
+                Ken Chisholm
                 <br>
-                Mechatronics Engineer
             </h1>
-
             <p>
-
-                I design intelligent electromechanical systems by combining
-                embedded software, electronics, and mechanical design.
-
+                BASc In Sustainable Energy Engineering 
             </p>
 
             <div class="hero-buttons">
 
-                <a href="assets/resume.pdf" class="button primary">
+                <a href="assets/Resume_Ken_Chisholm.pdf" class="button primary">
                     Resume
                 </a>
 
-                <a href="#" class="button secondary">
-                    GitHub
-                </a>
-
-                <a href="#" class="button secondary">
+                <a href="https://www.linkedin.com/in/ken-chisholm-378203222" class="button primary">
                     LinkedIn
                 </a>
 
@@ -133,18 +101,7 @@
             <span class="material-symbols-outlined">
                 memory
             </span>
-
             <p>Skills</p>
-
-        </a>
-
-        <a href="#contact">
-
-            <span class="material-symbols-outlined">
-                mail
-            </span>
-
-            <p>Contact</p>
 
         </a>
 
@@ -156,15 +113,29 @@
 
     <section id="about" class="content-section">
 
+        <style>
+        .wrap-left {
+            float: left;       
+            margin-right: 60px; 
+            margin-bottom: 10px;
+        }
+        
+        </style>
+
         <h2>About Me</h2>
+        <img src="assets/me_small.jpg" alt="Stawamus Chief 1st Peak" class="wrap-left">
+        <p style="padding-bottom: 25px; padding-top:100px">
 
-        <p>
-
-            I am a Mechatronics Engineering student with a passion for embedded
-            systems, robotics, and intelligent electromechanical design.
-            My interests include control systems, PCB design, firmware
-            development, and designing hardware that solves real-world
-            engineering problems.
+            I am a recent graduate from SFU's Sustainable Energy Engineering program. I have 
+            multidisciplinary experience in firmware, electrical, and mechanical engineering. 
+            I am particularly interested in energy generation technologies, automation, and 
+            embedded systems. As an engineer, I strive to build my skills and knowledge through
+            real-world experience, nurture my curiosity, and continue to challenge 
+            myself in my work.
+         <br><br>
+            Some hobbies of mine include playing the saxophone, hiking, and cycling. I'm happiest when
+            I'm outside enjoying nature. Any time spent outdoors feels like time well spent.
+            I also have a keen interest in art, music, and anything that requires a creative process. 
 
         </p>
 
@@ -180,36 +151,67 @@
 
         <div class="experience-card">
 
-            <h3>Embedded Systems Engineering Co-op</h3>
+            <h3>Interfacial Engineering Co-op</h3>
 
-            <h4>Moment Energy</h4>
+            <h4>SFU EISEn Research Lab</h4>
 
             <p class="date">
-                May 2025 – August 2025
+                Sept 2024 – Apr 2025
             </p>
 
             <ul>
 
                 <li>
-                    Developed embedded firmware in C for STM32 microcontrollers.
+                    Received training and was in charge of maintenance for test equipment such as a
+                     contact angle goniometer, thermogravimetric analyzer, differential scanning calorimeter,
+                      plasma etcher, and UV laser
                 </li>
 
                 <li>
-                    Implemented DMA, SPI, I2C, UART, ADC, and CAN communication.
+                    Optimized a process for creating micro-textured pyramidal structures for wettability testing 
+                    using a UV laser, which was easily replicable and produced samples with uniform spacing and 
+                    pyramid height with a tolerance of 5 μm
+
                 </li>
 
                 <li>
-                    Improved real-time control loop performance and reliability.
-                </li>
-
-                <li>
-                    Designed and tested embedded hardware for battery systems.
+                    Presented research at Nanolytica 2025 and ACS Colloids 2025 conferences
                 </li>
 
             </ul>
 
         </div>
 
+        <div class="experience-card">
+
+            <h3>Manufacturing and Production Co-op</h3>
+
+            <h4>Moment Energy</h4>
+
+            <p class="date">
+                Sept 2023 – Dec 2023
+            </p>
+
+            <ul>
+
+                <li>
+                    Received training for power tools such as drills, impact drivers, miter saws, circular
+                    saws, compressors, and torque wrenches to construct test benches
+                </li>
+
+                <li>
+                    Supported UL1973 certification efforts by conducting locked-rotor and endurance testing for 
+                    cooling pumps used in production units
+                </li>
+
+                <li>
+                    Automated pump endurance testing by interfacing flow rate, thermal, current, and voltage 
+                    sensors with an Arduino and Raspberry Pi data acquisition platform. 
+                </li>
+
+            </ul>
+
+        </div>
     </section>
 
     <!-- ========================= -->
@@ -218,74 +220,113 @@
 
     <section id="projects" class="content-section">
 
-        <h2>Featured Projects</h2>
+    <h2>Projects</h2>
 
-        <div class="project-grid">
+    <a class="featured-project">
 
-            <a href="projects/viridis.html" class="project-card">
+        <div class="project-images">
 
-                <img src="assets/images/viridis.jpg"
-                    alt="Viridis Trailer">
+            <figure>
 
-                <div class="project-content">
+                <img
+                src="assets/trailer.png"
+                alt="Viridis Electric Bicycle Trailer"
+                >
 
-                    <h3>Viridis Trailer</h3>
+                <figcaption>
+                    <strong> Working Prototype </strong>
+                </figcaption>
+            </figure>
+            
+            <figure>
 
-                    <p>
+                <img
+                src="assets/upper_compartment.png"
+                alt="Upper Electrical Compartment"
+                >
+                <figcaption>
+                    <strong> Upper Electrical Compartment </strong>
+                </figcaption>
+            </figure>
+            
+            <figure>
 
-                        Intelligent electrically-assisted bicycle trailer
-                        featuring embedded control, sensor fusion,
-                        and motor control.
+                <img
+                src="assets/lower_compartment_small.png"
+                alt="Lower Electrical Compartment"
+                >
+                <figcaption>
+                    <strong> Lower Electrical Compartment </strong>
+                </figcaption>
+            </figure>
+            
 
-                    </p>
+        </div>
+        
+        <div class="featured-project-content">
 
-                </div>
+            <h3>Viridis – Intelligent Electric Bicycle Trailer</h3>
 
-            </a>
+            <h4> Introduction </h4>
 
-            <a href="#" class="project-card">
+            <p>
+                To reduce the reliance on internal combustion engine (ICE) motor vehicles
+                for towing purposes, a motorized bicycle trailer design was proposed. It 
+                incorporates an electric propulsion, braking, and a central control system 
+                to account for its own weight, providing towing capability while imparting 
+                minimal force onto the rider.
+            </p>
 
-                <img src="assets/images/drone.jpg"
-                    alt="Drone">
+            <h4> Engineering Challenges </h4>
 
-                <div class="project-content">
+            <ul>
+                <li>
+                    Minimizing control system runtime to account for real-time operating constraints 
+                </li>
+                
+                <li>
+                    Integrating 10+ sensors with a STM32 microcontroller, leveraging I2C and SPI communication
+                    protocols and analog, digital, and PWM I/O
+                </li>
 
-                    <h3>Drone Design</h3>
+                <li>
+                    Implementing electrical isolation between high-power components and low-power sensors
+                    and control hardware to prevent noise propagation
+                </li>
+            </ul>
+            <h4 style="padding-top:15px"> Results and Learnings </h4>
 
-                    <p>
+            <ul>
+                <li>
+                    Achieved a 93% reduction in force felt by the rider 
+                </li>
 
-                        Custom quadcopter frame designed for lightweight,
-                        modular payload integration.
+                <li>
+                     Implemented control loop on 100Hz interrupt timer, ensuring that 
+                     the system has a known and consistent response time 
+                </li>
+                
+                <li>
+                    Leveraged DMA capabilities of microcontroller to facilitate memory transfer from sensors
+                    while reducing control loop runtime
+                </li>
+            </ul>
 
-                    </p>
+            <div class="tech-stack">
 
-                </div>
-
-            </a>
-
-            <a href="#" class="project-card">
-
-                <img src="assets/images/vacuum.jpg"
-                    alt="Vacuum Robot">
-
-                <div class="project-content">
-
-                    <h3>Rotating Disc Vacuum</h3>
-
-                    <p>
-
-                        Exploring novel cyclonic separation using a rotating
-                        permeable disc for robotic vacuum cleaners.
-
-                    </p>
-
-                </div>
-
-            </a>
+                <span>STM32</span>
+                <span>C/C++</span>
+                <span>SPI</span>
+                <span>I²C</span>
+                <span>PID Control</span>
+                <span>Oscilloscope</span>
+                <span>Function Generator</span>
+                <span>Soldering</span>
+            </div>
 
         </div>
 
-    </section>
+    </a>
 
     <!-- ========================= -->
     <!-- Skills -->
@@ -314,7 +355,7 @@
             </div>
 
             <div class="skill">
-                PCB Design
+                Autodesk Inventor
             </div>
 
             <div class="skill">
@@ -326,40 +367,16 @@
             </div>
 
             <div class="skill">
-                CAD
+                PLC
             </div>
 
-        </div>
+            <div class="skill">
+                Matlab/Simulink
+            </div>
 
-    </section>
-
-    <!-- ========================= -->
-    <!-- Contact -->
-    <!-- ========================= -->
-
-    <section id="contact" class="content-section">
-
-        <h2>Contact</h2>
-
-        <p>
-
-            Interested in collaborating or discussing engineering projects?
-
-        </p>
-
-        <div class="contact-links">
-
-            <a href="mailto:your@email.com">
-                Email
-            </a>
-
-            <a href="#">
-                LinkedIn
-            </a>
-
-            <a href="#">
-                GitHub
-            </a>
+            <div class="skill">
+                Raspberry Pi
+            </div>
 
         </div>
 

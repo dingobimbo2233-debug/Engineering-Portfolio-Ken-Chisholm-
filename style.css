@@ -19,9 +19,9 @@ html {
     --border: #e6e8eb;
 
     --text: #222222;
-    --text-light: #5c6470;
+    --text-light: #333e4d;
 
-    --primary: #2563eb;
+    --primary: #222222;
 
     --shadow:
         0px 8px 30px rgba(0,0,0,0.05);
@@ -281,7 +281,7 @@ header {
 
     gap: 2rem;
 
-    padding-bottom: 5rem;
+    padding-top: 1rem;
 
 }
 
@@ -364,20 +364,18 @@ header {
 }
 
 /* ==========================================
-   Projects
+   Featured Project
 ========================================== */
 
-.project-grid {
+.featured-project {
 
     display: grid;
 
-    grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
+    grid-template-columns: 45% 55%;
 
     gap: 2rem;
 
-}
-
-.project-card {
+    align-items: start;
 
     text-decoration: none;
 
@@ -395,7 +393,7 @@ header {
 
 }
 
-.project-card:hover {
+.featured-project:hover {
 
     transform: translateY(-6px);
 
@@ -403,28 +401,111 @@ header {
 
 }
 
-.project-card img {
+.project-images {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 1.5rem;
+
+}
+
+.project-images img {
 
     width: 100%;
 
-    height: 220px;
+    height: auto;
 
-    object-fit: cover;
+    display: block;
 
-}
+    border-radius: 12px;
 
-.project-content {
-
-    padding: 1.5rem;
+    border: 1px solid var(--border);
 
 }
 
-.project-content p {
+.project-images figcaption {
 
     margin-top: .75rem;
 
+    font-size: .9rem;
+
+    color: var(--text-light);
+
+    line-height: 1.5;
+
+    text-align: center;
+
 }
 
+.featured-project-content {
+
+    padding: 2.5rem;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+}
+
+.featured-project-content h3 {
+
+    font-size: 1.8rem;
+
+    margin-bottom: 1rem;
+
+}
+
+.featured-project-content p {
+
+    margin-bottom: 1.75rem;
+
+}
+
+/* ---------- Technology Badges ---------- */
+
+.tech-stack {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: .75rem;
+
+    margin-bottom: 2rem;
+
+}
+
+.tech-stack span {
+
+    padding: .45rem .9rem;
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+
+    border-radius: 999px;
+
+    font-size: .9rem;
+
+    font-weight: 500;
+
+}
+
+/* ---------- Link ---------- */
+
+.project-link {
+
+    color: var(--primary);
+
+    font-weight: 600;
+
+    font-size: 1rem;
+
+}
 /* ==========================================
    Skills
 ========================================== */
@@ -462,34 +543,6 @@ header {
 }
 
 /* ==========================================
-   Contact
-========================================== */
-
-.contact-links {
-
-    display: flex;
-
-    gap: 2rem;
-
-    margin-top: 1.5rem;
-
-}
-
-.contact-links a {
-
-    text-decoration: none;
-
-    color: var(--primary);
-
-}
-
-.contact-links a:hover {
-
-    text-decoration: underline;
-
-}
-
-/* ==========================================
    Footer
 ========================================== */
 
@@ -510,6 +563,17 @@ footer {
 ========================================== */
 
 @media (max-width: 800px) {
+    .featured-project {
+
+    grid-template-columns: 1fr;
+
+}
+
+.featured-project img {
+
+    min-height: 240px;
+
+}
 
     .navbar {
 
@@ -540,15 +604,6 @@ footer {
         text-align: center;
 
     }
-
-    .contact-links {
-
-        flex-direction: column;
-
-        gap: .75rem;
-
-    }
-
 }
 /* ==========================================
    JavaScript Classes
